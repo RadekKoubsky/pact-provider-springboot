@@ -51,7 +51,7 @@ public class PactVerificationTest {
         System.setProperty("pactbroker.url", env.getProperty("pactbroker.url"));
         System.setProperty("pactbroker.auth.username", env.getProperty("pactbroker.auth.username"));
         System.setProperty("pactbroker.auth.password", env.getProperty("pactbroker.auth.password"));
-        System.setProperty("pactbroker.consumerversionselectors.tags", String.format("%s,devreview,qa,stage,production", env.getProperty("git.branch")));
+        System.setProperty("pactbroker.consumerversionselectors.tags", String.format("%s,master", env.getProperty("git.branch")));
     }
 
     @BeforeEach

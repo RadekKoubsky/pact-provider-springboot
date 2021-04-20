@@ -17,7 +17,7 @@ public class BookDto {
     private final String author;
     private final String isbn;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MMM dd, yyyy")
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate published;
 }

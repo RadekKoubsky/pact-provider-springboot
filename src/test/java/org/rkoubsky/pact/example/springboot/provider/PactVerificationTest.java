@@ -47,11 +47,11 @@ public class PactVerificationTest {
     public static void beforeAll(@Autowired Environment env) {
         System.setProperty("pact.verifier.publishResults", "true");
         System.setProperty("pact.provider.tag", env.getProperty("git.branch"));
-        System.setProperty("pact.provider.version", "1.0.0");
+        System.setProperty("pact.provider.version", env.getProperty("git.commit.id.abbrev"));
         System.setProperty("pactbroker.url", env.getProperty("pactbroker.url"));
         System.setProperty("pactbroker.auth.username", env.getProperty("pactbroker.auth.username"));
         System.setProperty("pactbroker.auth.password", env.getProperty("pactbroker.auth.password"));
-        System.setProperty("pactbroker.consumerversionselectors.tags", "master");
+        System.setProperty("pactbroker.consumerversionselectors.tags", env.getProperty("git.branch"));
     }
 
     @BeforeEach

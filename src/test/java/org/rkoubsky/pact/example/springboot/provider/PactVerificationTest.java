@@ -52,7 +52,6 @@ public class PactVerificationTest {
         System.setProperty("pactbroker.auth.username", env.getProperty("pactbroker.auth.username"));
         System.setProperty("pactbroker.auth.password", env.getProperty("pactbroker.auth.password"));
         System.setProperty("pactbroker.consumerversionselectors.tags", "master");
-        System.setProperty("pactbroker.includeWipPactsSince", "2021-04-18");
     }
 
     @BeforeEach
